@@ -1,21 +1,44 @@
-<form nz-form [nzLayout]="'inline'" [formGroup]="validateForm" (ngSubmit)="submitForm()">
-  <nz-form-item>
-    <nz-form-control nzErrorTip="Please input your username!">
-      <nz-input-group nzPrefixIcon="user">
-        <input formControlName="userName" nz-input placeholder="Username" />
-      </nz-input-group>
-    </nz-form-control>
-  </nz-form-item>
-  <nz-form-item>
-    <nz-form-control nzErrorTip="Please input your Password!">
-      <nz-input-group nzPrefixIcon="lock">
-        <input formControlName="password" nz-input type="password" placeholder="Password" />
-      </nz-input-group>
-    </nz-form-control>
-  </nz-form-item>
-  <nz-form-item>
-    <nz-form-control>
-      <button nz-button nzType="primary" [disabled]="!validateForm.valid">Log in</button>
-    </nz-form-control>
-  </nz-form-item>
-</form>
+<div class="login-wrapper" style="background-image: url(assets/bg-login.jpg);">
+  <div nz-row>
+    <div nz-col nzSpan="8"></div>
+    <div nz-col nzSpan="8" class="box-login">
+      <div class="head">
+        <div class="logo">
+          <img src="assets/header/logo.png" style="max-width: 80px;" alt="logo img">
+        </div>
+        <div class="title">Tổng cục đường bộ Việt Nam</div>
+        <div class="subtitle">Công dịch vụ trực tuyến</div>
+      </div>
+      <div class="form">
+        <form nz-form [formGroup]="validateForm" class="login-form" (ngSubmit)="submitForm()">
+          <nz-form-item>
+            <nz-form-control nzErrorTip="Please input your username!">
+              <nz-input-group nzPrefixIcon="user" class="form-control">
+                <input type="text" class="form-control-input" nz-input formControlName="userName"
+                  placeholder="Tên đăng nhập" />
+              </nz-input-group>
+            </nz-form-control>
+          </nz-form-item>
+          <nz-form-item>
+            <nz-form-control nzErrorTip="Please input your Password!">
+              <nz-input-group nzPrefixIcon="lock" class="form-control">
+                <input type="password" class="form-control-input" nz-input formControlName="password"
+                  placeholder="Mật Khẩu" />
+              </nz-input-group>
+            </nz-form-control>
+          </nz-form-item>
+          <button nz-button class="login-form-button" [nzType]="'primary'">Đăng nhập</button>
+
+          <div nz-row style="text-align: center;">
+            <a nz-col [nzSpan]="12" href="#">Quên tài khoản</a>
+            <a nz-col [nzSpan]="12" href="#">Quên mật khẩu</a>
+          </div>
+
+          <button nz-button class="login-form-button login-form-button-second" [nzType]="'primary'">Đăng nhập với
+            VnConnect</button>
+        </form>
+      </div>
+    </div>
+    <div nz-col nzSpan="8"></div>
+  </div>
+</div>

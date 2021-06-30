@@ -10,10 +10,12 @@ import {NzGridModule} from 'ng-zorro-antd/grid';
 import {NzInputModule} from 'ng-zorro-antd/input';
 import {NzFormModule} from 'ng-zorro-antd/form';
 import {ReactiveFormsModule} from '@angular/forms';
+import { NzIconModule } from 'ng-zorro-antd/icon';
+import {NzButtonModule} from 'ng-zorro-antd/button';
 
 @NgModule({
-  imports: [WelcomeRoutingModule, NzLayoutModule,
-    NzMenuModule, NzGridModule, NzInputModule, NzFormModule, ReactiveFormsModule],
+  imports: [WelcomeRoutingModule, NzLayoutModule, NzIconModule,
+    NzMenuModule, NzGridModule, NzInputModule, NzFormModule, ReactiveFormsModule, NzButtonModule],
   declarations: [WelcomeComponent],
   exports: [WelcomeComponent]
 })
