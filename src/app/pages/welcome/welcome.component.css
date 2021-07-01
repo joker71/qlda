@@ -1,14 +1,28 @@
 @font-face {
+  font-family: "Roboto";
+  src: url("../fonts/Roboto-Bold.eot?#iefix") format("embedded-opentype"), url("../fonts/Roboto-Bold.woff") format("woff"), url("../fonts/Roboto-Bold.ttf") format("truetype"), url("../fonts/Roboto-Bold.svg#SFUFutura") format("svg");
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: url("../fonts/Roboto-Regular.eot?#iefix") format("embedded-opentype"), url("../fonts/Roboto-Regular.woff") format("woff"), url("../fonts/Roboto-Regular.ttf") format("truetype"), url("../fonts/Roboto-Regular.svg#SFUFutura") format("svg");
+  font-weight: normal;
+}
+
+@font-face {
   font-family: "RobotoCondensed";
   src: url("../fonts/RobotoCondensed-Bold.eot?#iefix") format("embedded-opentype"), url("../fonts/RobotoCondensed-Bold.woff") format("woff"), url("../fonts/RobotoCondensed-Bold.ttf") format("truetype"), url("../fonts/RobotoCondensed-Bold.svg#SFUFutura") format("svg");
   font-weight: 500;
 }
+
 .login-wrapper {
   width: 100%;
   height: 100%;
   background-size: cover;
 }
-.box-login{
+
+.box-login {
   position: absolute;
   top: 50%;
   max-width: 450px;
@@ -25,15 +39,19 @@
   text-align: center;
 }
 
-
 /* title */
+
+.head {
+  margin-bottom: 20px;
+}
+
 .title {
   font-size: 20px;
   color: #0D2D5E;
-  margin-bottom: 5px;
   font-family: RobotoCondensed;
   text-transform: uppercase;
 }
+
 .subtitle {
   font-size: 24px;
   color: #CE7A58;
@@ -42,12 +60,16 @@
 }
 
 /* form  */
-.login-form{
+
+.login-form {
   font-family: inherit;
 }
 
+.form-input {
+  margin-bottom: 15px;
+}
 
-.form-control-input, .form-control{
+.form-control-input, .form-control {
   border: 0px;
   border-bottom: 1px solid rgba(130, 133, 138, 0.3);
   border-radius: 0px;
@@ -62,34 +84,79 @@
   box-shadow: none;
 }
 
-.form-control-input.form-control-input:placeholder {
+.form-control>input::placeholder {
   font-weight: normal;
   color: #000;
 }
 
-.login-button{
+.login-button {
   width: 100%;
   height: 120%;
   border-radius: 4px;
   padding: 10px 10px;
 }
-.login-form-button
-{
+
+.login-form-button {
   background: #CE7A58;
   color: #fff;
   font-weight: bold;
 }
-.login-form-button:hover, login-form-button:focus, .login-form-button:active{
+
+.login-form-button:hover, login-form-button:focus, .login-form-button:active {
   background: #bc5d37;
   color: #fff;
 }
+
 .login-form-button-second {
   background: #fff;
   color: #CE7A58;
   border-color: #CE7A58;
   font-weight: bold;
 }
+
 .login-form-button-second:hover, .login-form-button-second:focus, .login-form-button-second:active {
   background: #bc5d37;
   color: #fff;
+}
+
+.captcha {
+  width: 130px;
+  padding: 5px 10px;
+  text-align: center;
+  letter-spacing: 3px;
+  background: #E9EBF0;
+  font-weight: bold;
+  font-family: serif;
+  color: rgba(41, 45, 52, 0.5);
+}
+
+.login-form-refresh {
+  margin-bottom: 10pt;
+  text-align: right;
+  font-family: Roboto;
+}
+
+.login-form-refresh>a {
+  color: #2572CD;
+}
+
+.login-form-forget {
+  text-align: center;
+  margin: 10px;
+}
+
+.login-form-forget>div>a {
+  padding: 5px 10px;
+  display: inline-block;
+  color: #848484;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.login-pass-foget::before {
+  content: "";
+  height: 20px;
+  display: inline-block;
+  border-left: 2px solid #E9F0F8;
+  vertical-align: middle;
 }

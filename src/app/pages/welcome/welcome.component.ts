@@ -16,12 +16,13 @@ export class WelcomeComponent implements OnInit {
     }
   }
 
-  constructor(private fb: FormBuilder) {}
+  constructor(private fb: FormBuilder) { }
 
   ngOnInit(): void {
     this.validateForm = this.fb.group({
       userName: [null, [Validators.required]],
       password: [null, [Validators.required]],
+      catchaL:  [null, [Validators.required]],
       remember: [true]
     });
   }

@@ -7,11 +7,11 @@
           <img src="assets/header/logo.png" style="max-width: 80px;" alt="logo img">
         </div>
         <div class="title">Tổng cục đường bộ Việt Nam</div>
-        <div class="subtitle">Công dịch vụ trực tuyến</div>
+        <div class="subtitle">CỔNG DỊCH VỤ CÔNG TRỰC TUYẾN</div>
       </div>
       <div class="form">
         <form nz-form [formGroup]="validateForm" class="login-form" (ngSubmit)="submitForm()">
-          <nz-form-item>
+          <nz-form-item class="form-input">
             <nz-form-control nzErrorTip="Please input your username!">
               <nz-input-group nzPrefixIcon="user" class="form-control">
                 <input type="text" class="form-control-input" nz-input formControlName="userName"
@@ -19,31 +19,45 @@
               </nz-input-group>
             </nz-form-control>
           </nz-form-item>
-          <nz-form-item>
+          <nz-form-item class="form-input">
             <nz-form-control nzErrorTip="Please input your Password!">
               <nz-input-group nzPrefixIcon="lock" class="form-control">
                 <input type="password" class="form-control-input" nz-input formControlName="password"
                   placeholder="Mật khẩu" />
+                <i nz-icon nzType="eye" nzTheme="outline"></i>
               </nz-input-group>
             </nz-form-control>
           </nz-form-item>
-          <nz-form-item>
-            <nz-form-control nzErrorTip="Please input your username!">
-              <nz-input-group nzPrefixIcon="user" class="form-control">
-                <input type="text" class="form-control-input" nz-input formControlName="userName"
-                  placeholder="Tên đăng nhập" />
+          <nz-form-item class="login-form-catcha form-input">
+            <nz-form-control nzErrorTip="Please input catcha!">
+              <nz-input-group nzPrefixIcon="qrcode" class="form-control">
+                <input type="text" class="form-control-input" nz-input formControlName="catcha"
+                  placeholder="Mã kiểm tra" />
+                  <div class="captcha">AKLMTD</div>
               </nz-input-group>
             </nz-form-control>
           </nz-form-item>
+          <div nz-row class="login-form-margin">
+            <div nz-col [nzSpan]="12"></div>
+            <div nz-col [nzSpan]="12" class="login-form-refresh">
+              <a href="#">Đổi mã kiểm tra</a>
+            </div>
+          </div>
 
           <button nz-button class="login-button login-form-button" [nzType]="'primary'">Đăng nhập</button>
 
-          <div nz-row style="text-align: center;">
-            <a nz-col [nzSpan]="12" href="#">Quên tài khoản</a>
-            <a nz-col [nzSpan]="12" href="#">Quên mật khẩu</a>
+          <div nz-row class="login-form-forget">
+            <div nz-col [nzSpan]="4"></div>
+            <div nz-col [nzSpan]="8" class="login-user-foget" >
+              <a href="#">Quên tài khoản</a>
+            </div>
+            <div nz-col [nzSpan]="8" class="login-pass-foget" >
+              <a href="#">Quên mật khẩu</a>
+            </div>
+            <div nz-col [nzSpan]="4"></div>
           </div>
 
-          <button nz-button class="login-button login-form-button-second" [nzType]="'primary'">Đăng nhập với
+          <button nz-button class="login-button login-form-button-second">Đăng nhập với
             VnConnect</button>
         </form>
       </div>
