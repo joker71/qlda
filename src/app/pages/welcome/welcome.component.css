@@ -56,16 +56,18 @@
   font-weight: bold;
   font-size: 16px;
 }
-.form-control-input:focus {
-  border-color: #0D2D5E;
+
+.form-control-input.form-control-input:focus {
+  border-color: #5e0d0d;
   box-shadow: none;
 }
-.form-control-input:placeholder {
+
+.form-control-input.form-control-input:placeholder {
   font-weight: normal;
   color: #000;
 }
 
-.login-form-button{
+.login-button{
   width: 100%;
   height: 120%;
   border-radius: 4px;
@@ -87,7 +89,7 @@
   border-color: #CE7A58;
   font-weight: bold;
 }
-.login-form-button-second:hover, .btn-second:focus, .btn-second:active {
+.login-form-button-second:hover, .login-form-button-second:focus, .login-form-button-second:active {
   background: #bc5d37;
   color: #fff;
 }
